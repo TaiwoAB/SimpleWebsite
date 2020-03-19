@@ -70,7 +70,7 @@ class ApplicationUsingJsonReadersWriters @Inject()(
       Ok(persons.toString)
     }
   }
-  def deleteOne: Action[JsValue] = Action.async(parse.json){ request =>
+  def delete: Action[JsValue] = Action.async(parse.json){ request =>
     request.body.validate[User].map { user =>
       collection.flatMap(c => c.remove(user)).map{_ => Ok("removed")
       }
