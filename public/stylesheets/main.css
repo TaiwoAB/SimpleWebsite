@@ -158,3 +158,6 @@ body{
 #body2{
     background-image: url(/assets/images/sea-3652697_1920.jpg);
 }
+a.box{
+    text-decoration: none;
+}
